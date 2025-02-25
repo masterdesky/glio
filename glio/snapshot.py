@@ -404,7 +404,7 @@ class SnapshotBase(object):
             arrays = [a for a in getattr(self, name) if a is not None]
             for a in arrays:
                 if a.dtype != dtype or (a.ndim > 1 and a.shape[-1] != ndims):
-                    print name, a.dtype, dtype
+                    print(name, a.dtype, dtype)
                     malformed.append(name)
                     # Don't want duplicates; one problem is sufficient.
                     break
@@ -420,7 +420,7 @@ class SnapshotBase(object):
 
         Must be overriden by subclasses.
         """
-        raise NotImplementedError("Subclassees must override _block_exists")
+        raise NotImplementedError("Subclasses must override _block_exists")
 
     def _get_flag(self, flag):
         if isinstance(flag, str):

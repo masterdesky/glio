@@ -42,7 +42,7 @@ class SnapshotView(object):
     # TODO: We should be able to change attributes of the view, and these
     # changes should be propagated to the parent snapshot.
     def __setattr__(self, name, value):
-        raise TypeError("'SnapsotView' object does not support item assignment")
+        raise TypeError("'SnapshotView' object does not support item assignment")
 
     @property
     def fields(self):
